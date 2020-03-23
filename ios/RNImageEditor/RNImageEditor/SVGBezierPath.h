@@ -81,17 +81,7 @@ FOUNDATION_EXTERN void SVGDrawPathsWithBlock(NSArray<SVGBezierPath*> * const pat
  */
 - (SVGBezierPath *)pathBySettingSVGAttributes:(NSDictionary *)attributes;
 
-#if !TARGET_OS_IPHONE
-@property(nonatomic, readonly) CGPathRef CGPath;
-#endif
-
-
 + (void)resetCache;
 
-
-#if !TARGET_OS_IPHONE
-- (void)applyTransform:(CGAffineTransform)transform;
-#endif
 @end
 NS_ASSUME_NONNULL_END
-

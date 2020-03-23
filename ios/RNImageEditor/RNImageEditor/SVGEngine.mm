@@ -1031,25 +1031,12 @@ static NSString *_SVGFormatNumber(NSNumber * const aNumber)
 @implementation NSValue (PocketSVG)
 + (instancetype)svg_valueWithCGAffineTransform:(CGAffineTransform)aTransform
 {
-#if TARGET_OS_IPHONE
     return [self valueWithCGAffineTransform:aTransform];
-#else
-    return [self valueWithBytes:&aTransform objCType:@encode(CGAffineTransform)];
-#endif
 }
 
 - (CGAffineTransform)svg_CGAffineTransformValue
 {
-#if TARGET_OS_IPHONE
     return [self CGAffineTransformValue];
-#else
-    if(strcmp(self.objCType, @encode(CGAffineTransform)) == 0) {
-        CGAffineTransform transform;
-        [self getValue:&transform];
-        return transform;
-    } else
-        return (CGAffineTransform) {0};
-#endif
 }
 @end
 
