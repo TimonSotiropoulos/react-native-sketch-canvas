@@ -70,21 +70,21 @@
     CGContextSetLineWidth(contextRef, self.entityStrokeWidth / self.scale);
     CGContextSetStrokeColorWithColor(contextRef, [self.entityStrokeColor CGColor]);
 
-    if ([self hasSvgPaths]) {
-        CALayer *layer = [[CALayer alloc] init];
-        for (UIBezierPath *path in self.svgPaths) {
-            CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
-            [shapeLayer setPath:[path CGPath]];
-            [shapeLayer setFillColor:[self.entityStrokeColor CGColor]];
-            [shapeLayer setLineWidth:lineWidth];
-            [layer addSublayer:shapeLayer];
-        }
-        CGFloat wRatio = layer.frame.size.width / rect.size.width;
-        CGFloat hRatio = layer.frame.size.height / rect.size.height;
-        CATransform3D transform = CATransform3DMakeScale(wRatio, hRatio, 1.0);
-        [layer setTransform:transform];
-        [layer renderInContext:contextRef];
-    }
+//    if ([self hasSvgPaths]) {
+//        CALayer *layer = [[CALayer alloc] init];
+//        for (UIBezierPath *path in self.svgPaths) {
+//            CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+//            [shapeLayer setPath:[path CGPath]];
+//            [shapeLayer setFillColor:[self.entityStrokeColor CGColor]];
+//            [shapeLayer setLineWidth:lineWidth];
+//            [layer addSublayer:shapeLayer];
+//        }
+//        CGFloat wRatio = layer.frame.size.width / rect.size.width;
+//        CGFloat hRatio = layer.frame.size.height / rect.size.height;
+//        CATransform3D transform = CATransform3DMakeScale(wRatio, hRatio, 1.0);
+//        [layer setTransform:transform];
+//        [layer renderInContext:contextRef];
+//    }
 
     CGContextDrawPath(contextRef, kCGPathStroke);
 }
