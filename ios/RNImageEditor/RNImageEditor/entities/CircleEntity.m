@@ -53,9 +53,6 @@
         self.MIN_SCALE = 0.3f;
     }
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"cloud" withExtension:@"svg"];
-    [self setSvgPaths:[SVGBezierPath pathsFromSVGAtURL:url]];
-    
     return self;
 }
 
