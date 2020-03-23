@@ -54,13 +54,13 @@
         self.MIN_SCALE = 0.3f;
     }
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"cloud" withExtension:@"svg"];
-    if (url == nil) {
-        NSLog(@"SKETCH ERR: url not found");
-    } else {
-        NSLog(@"%@", [url absoluteString]);
-//        [self setSvgPaths:[SVGBezierPath pathsFromSVGAtURL:url]];
-    }
+//    NSURL *url = [[NSBundle mainBundle] URLForResource:@"cloud" withExtension:@"svg"];
+//    if (url == nil) {
+//        NSLog(@"SKETCH ERR: url not found");
+//    } else {
+//        NSLog(@"%@", [url absoluteString]);
+////        [self setSvgPaths:[SVGBezierPath pathsFromSVGAtURL:url]];
+//    }
     
     return self;
 }
