@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "base/MotionEntity.h"
 #import "CloudEntity.h"
 #import "base/SVGBezierPath.h"

@@ -50,7 +50,7 @@
     return self;
 }
 
-- (void)setSvgPaths:(NSArray<SVGBezierPath *> *)svgPaths {
+- (void)setSvgPaths:(NSArray<UIBezierPath *> *)svgPaths {
     self.svgPaths = [NSArray arrayWithArray:svgPaths];
 }
 
