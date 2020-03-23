@@ -50,6 +50,14 @@
     return self;
 }
 
+- (void)setSvgPaths:(NSArray<SVGBezierPath *> *)svgPaths {
+    self.svgPaths = [NSArray arrayWithArray:svgPaths];
+}
+
+- (BOOL)hasSvgPaths {
+    return self.svgPaths != nil && [self.svgPaths count] > 0;
+}
+
 - (BOOL)isEntitySelected {
     return self.isSelected;
 }

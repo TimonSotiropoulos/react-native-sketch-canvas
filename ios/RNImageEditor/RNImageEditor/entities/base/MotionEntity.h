@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "Enumerations.h"
+#import "../../SVGBezierPath.h"
 
 @protocol MotionEntityProtocol
 - (void)drawContent:(CGRect)rect withinContext: (CGContextRef)contextRef;
@@ -31,6 +32,7 @@
 @property (nonatomic) CGFloat entityStrokeWidth;
 @property (nonatomic) UIColor* entityStrokeColor;
 @property (nonatomic) NSString* entityId;
+@property (nonatomic) NSArray<SVGBezierPath*>* svgPaths;
 
 
 - (instancetype)initAndSetupWithParent: (NSInteger)parentWidth
@@ -60,5 +62,5 @@
            borderStrokeColor: (UIColor *)borderStrokeColor
            entityStrokeWidth: (CGFloat)entityStrokeWidth
            entityStrokeColor: (UIColor *)entityStrokeColor;
-
+- (BOOL)hasSvgPaths;
 @end

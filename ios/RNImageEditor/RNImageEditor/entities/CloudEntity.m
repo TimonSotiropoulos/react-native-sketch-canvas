@@ -59,63 +59,23 @@
     CGFloat lineWidth = self.entityStrokeWidth / self.scale;
     CGContextSetLineWidth(contextRef, self.entityStrokeWidth / self.scale);
     CGContextSetStrokeColorWithColor(contextRef, [self.entityStrokeColor CGColor]);
-    
-    // CGRect entityRect = CGRectMake(0, 0, rect.size.width, rect.size.height);
-    // CGFloat padding = (self.bordersPadding + self.entityStrokeWidth) / self.scale;
-    // entityRect = CGRectInset(entityRect, padding , padding);
-    // [[UIColor redColor] setFill];
-    // UIRectFill(entityRect);
-    
-    // CGFloat radius = rect.size.width / 2;
-    
-    // CGRect circleRect = CGRectMake(0, 0, radius, radius);
-    // circleRect = CGRectInset(circleRect, padding , padding);
-    
-    // CGContextStrokeEllipseInRect(contextRef, circleRect);
-    // CGContextStrokeRect(contextRef, entityRect);
 
-    // CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGFloat padding = (self.bordersPadding + self.entityStrokeWidth) / self.scale;
-    CGFloat radius = ((rect.size.width - padding) / 5) / 2;
-    CGPoint point = CGPointMake(radius + padding, radius + padding);
-//    CGFloat lineLength = 45.0;
-
-    for (int i = 0; i < 5; i++) {
-        CGContextAddArc(contextRef, point.x, point.y, radius, M_PI, M_PI * 2.0, NO);
-        point.x += radius * 2.0;
+    if ([self hasSvgPaths]) {
+        CALayer *layer = [[CALayer alloc] init];
+        for (SVGBezierPath *path in self.svgPaths) {
+            CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+            [shapeLayer setPath:[path CGPath]];
+            [shapeLayer setFillColor:[self.entityStrokeColor CGColor]];
+            [shapeLayer setLineWidth:lineWidth];
+            [layer addSublayer:shapeLayer];
+        }
+        CGFloat wRatio = layer.frame.size.width / rect.size.width;
+        CGFloat hRatio = layer.frame.size.height / rect.size.height;
+        CATransform3D transform = CATransform3DMakeScale(wRatio, hRatio, 1.0);
+        [layer setTransform:transform];
+        [layer renderInContext:contextRef];
     }
 
-    point.x -= radius;
-    point.y += radius;
-
-    for (int i = 0; i < 5; i++) {
-        CGContextAddArc(contextRef, point.x, point.y, radius, M_PI / 2.0, (3.0 * M_PI) / 2.0, YES);
-        point.y += radius * 2.0;
-    }
-
-    point.x -= radius;
-    point.y -= radius;
-
-    for (int i = 0; i < 5; i++) {
-        CGContextAddArc(contextRef, point.x, point.y, radius, M_PI, M_PI * 2.0, YES);
-        point.x -= radius * 2.0;
-    }
-
-    point.x += radius;
-    point.y -= radius;
-
-
-    for (int i = 0; i < 5; i++) {
-        CGContextAddArc(contextRef, point.x, point.y, radius, M_PI / 2.0, (3.0 * M_PI) / 2.0, NO);
-        point.y -= radius * 2.0;
-    }
-    // for (int i = 0; i < 5; i++) {
-    //     CGContextAddArc(contextRef, point.x, point.y, radius, (3.0 * M_PI) / 2.0, (M_PI / 2.0), YES);
-    //     point.y -= radius * 2.0;
-    // }
-
-    CGContextAddLineToPoint(contextRef, point.x, point.y);
     CGContextDrawPath(contextRef, kCGPathStroke);
 }
 

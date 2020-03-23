@@ -12,6 +12,10 @@
 		85C9F6F2218879DB00BD64B4 /* RectEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F6F1218879DB00BD64B4 /* RectEntity.m */; };
 		85C9F6F5218885F400BD64B4 /* TriangleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F6F4218885F400BD64B4 /* TriangleEntity.m */; };
 		85E432F5218892CD00FDDA74 /* ArrowEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E432F4218892CD00FDDA74 /* ArrowEntity.m */; };
+		93029520242920D700FBBF35 /* SVGEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9302951B242920D600FBBF35 /* SVGEngine.mm */; };
+		93029521242920D700FBBF35 /* SVGBezierPath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9302951E242920D700FBBF35 /* SVGBezierPath.mm */; };
+		930295272429232A00FBBF35 /* cloud.svg in Resources */ = {isa = PBXBuildFile; fileRef = 930295252429231D00FBBF35 /* cloud.svg */; };
+		9302952A242925F600FBBF35 /* CloudEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 93029529242925F600FBBF35 /* CloudEntity.m */; };
 		D70446F6229682C5007BBE77 /* BackgroundText.m in Sources */ = {isa = PBXBuildFile; fileRef = D70446F5229682C5007BBE77 /* BackgroundText.m */; };
 		D7BC84182180814600A275D3 /* MotionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC84172180814600A275D3 /* MotionEntity.m */; };
 		DE0C99801F32D596001BDE8B /* RNImageEditorData.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0C997F1F32D596001BDE8B /* RNImageEditorData.m */; };
@@ -45,6 +49,14 @@
 		85C9F6F4218885F400BD64B4 /* TriangleEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriangleEntity.m; sourceTree = "<group>"; };
 		85E432F3218892AE00FDDA74 /* ArrowEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowEntity.h; sourceTree = "<group>"; };
 		85E432F4218892CD00FDDA74 /* ArrowEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowEntity.m; sourceTree = "<group>"; };
+		9302951B242920D600FBBF35 /* SVGEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SVGEngine.mm; sourceTree = "<group>"; };
+		9302951C242920D700FBBF35 /* SVGPortability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGPortability.h; sourceTree = "<group>"; };
+		9302951D242920D700FBBF35 /* SVGEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGEngine.h; sourceTree = "<group>"; };
+		9302951E242920D700FBBF35 /* SVGBezierPath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SVGBezierPath.mm; sourceTree = "<group>"; };
+		9302951F242920D700FBBF35 /* SVGBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGBezierPath.h; sourceTree = "<group>"; };
+		930295252429231D00FBBF35 /* cloud.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cloud.svg; sourceTree = "<group>"; };
+		93029528242925F600FBBF35 /* CloudEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntity.h; sourceTree = "<group>"; };
+		93029529242925F600FBBF35 /* CloudEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudEntity.m; sourceTree = "<group>"; };
 		D70446F422968240007BBE77 /* BackgroundText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundText.h; sourceTree = "<group>"; };
 		D70446F5229682C5007BBE77 /* BackgroundText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundText.m; sourceTree = "<group>"; };
 		D7B7D3E1217DE92C00902B8C /* Enumerations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enumerations.h; sourceTree = "<group>"; };
@@ -82,12 +94,23 @@
 			path = base;
 			sourceTree = "<group>";
 		};
+		930295262429232300FBBF35 /* svg */ = {
+			isa = PBXGroup;
+			children = (
+				930295252429231D00FBBF35 /* cloud.svg */,
+			);
+			path = svg;
+			sourceTree = "<group>";
+		};
 		D7B7D3E0217DE80400902B8C /* entities */ = {
 			isa = PBXGroup;
 			children = (
+				930295262429232300FBBF35 /* svg */,
 				85C9F6F6218890F700BD64B4 /* base */,
 				858EE6312180DEC5009C9E08 /* CircleEntity.h */,
 				858EE6362180DFBD009C9E08 /* CircleEntity.m */,
+				93029528242925F600FBBF35 /* CloudEntity.h */,
+				93029529242925F600FBBF35 /* CloudEntity.m */,
 				85C9F6F0218878DB00BD64B4 /* RectEntity.h */,
 				85C9F6F1218879DB00BD64B4 /* RectEntity.m */,
 				85C9F6F3218885C600BD64B4 /* TriangleEntity.h */,
@@ -130,6 +153,11 @@
 				DED3A13520A4159A00D72FBF /* RNImageEditorUtility.m */,
 				D70446F422968240007BBE77 /* BackgroundText.h */,
 				D70446F5229682C5007BBE77 /* BackgroundText.m */,
+				9302951F242920D700FBBF35 /* SVGBezierPath.h */,
+				9302951E242920D700FBBF35 /* SVGBezierPath.mm */,
+				9302951D242920D700FBBF35 /* SVGEngine.h */,
+				9302951B242920D600FBBF35 /* SVGEngine.mm */,
+				9302951C242920D700FBBF35 /* SVGPortability.h */,
 			);
 			path = RNImageEditor;
 			sourceTree = "<group>";
@@ -144,6 +172,7 @@
 				DEFBA2541F322B5F00A4545C /* Sources */,
 				DEFBA2551F322B5F00A4545C /* Frameworks */,
 				DEFBA2561F322B5F00A4545C /* CopyFiles */,
+				930295242429231400FBBF35 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +216,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		930295242429231400FBBF35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930295272429232A00FBBF35 /* cloud.svg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DEFBA2541F322B5F00A4545C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -194,14 +234,17 @@
 			files = (
 				DEFBA25D1F322B6000A4545C /* RNImageEditor.m in Sources */,
 				8579D13721889DE500773C27 /* TextEntity.m in Sources */,
+				93029520242920D700FBBF35 /* SVGEngine.mm in Sources */,
 				DED3A13720A4159A00D72FBF /* RNImageEditorUtility.m in Sources */,
 				85C9F6F2218879DB00BD64B4 /* RectEntity.m in Sources */,
 				DE0C99801F32D596001BDE8B /* RNImageEditorData.m in Sources */,
 				D70446F6229682C5007BBE77 /* BackgroundText.m in Sources */,
 				D7BC84182180814600A275D3 /* MotionEntity.m in Sources */,
+				9302952A242925F600FBBF35 /* CloudEntity.m in Sources */,
 				858EE6372180DFBD009C9E08 /* CircleEntity.m in Sources */,
 				85E432F5218892CD00FDDA74 /* ArrowEntity.m in Sources */,
 				85C9F6F5218885F400BD64B4 /* TriangleEntity.m in Sources */,
+				93029521242920D700FBBF35 /* SVGBezierPath.mm in Sources */,
 				DEB694891F322F2A00DC6841 /* RNImageEditorManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
