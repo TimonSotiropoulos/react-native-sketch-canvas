@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "base/MotionEntity.h"
 #import "CloudEntity.h"
-#import "../SVGBezierPath.h"
+#import "base/SVGBezierPath.h"
 
 @implementation CloudEntity
 {

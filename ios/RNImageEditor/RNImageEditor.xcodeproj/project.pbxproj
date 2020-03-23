@@ -90,6 +90,11 @@
 				D7B7D3E1217DE92C00902B8C /* Enumerations.h */,
 				D7BC8411217F4FE600A275D3 /* MotionEntity.h */,
 				D7BC84172180814600A275D3 /* MotionEntity.m */,
+				9302951F242920D700FBBF35 /* SVGBezierPath.h */,
+				9302951E242920D700FBBF35 /* SVGBezierPath.mm */,
+				9302951D242920D700FBBF35 /* SVGEngine.h */,
+				9302951B242920D600FBBF35 /* SVGEngine.mm */,
+				9302951C242920D700FBBF35 /* SVGPortability.h */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -153,11 +158,6 @@
 				DED3A13520A4159A00D72FBF /* RNImageEditorUtility.m */,
 				D70446F422968240007BBE77 /* BackgroundText.h */,
 				D70446F5229682C5007BBE77 /* BackgroundText.m */,
-				9302951F242920D700FBBF35 /* SVGBezierPath.h */,
-				9302951E242920D700FBBF35 /* SVGBezierPath.mm */,
-				9302951D242920D700FBBF35 /* SVGEngine.h */,
-				9302951B242920D600FBBF35 /* SVGEngine.mm */,
-				9302951C242920D700FBBF35 /* SVGPortability.h */,
 			);
 			path = RNImageEditor;
 			sourceTree = "<group>";

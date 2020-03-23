@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "Enumerations.h"
-#import "../../SVGBezierPath.h"
+#import "SVGBezierPath.h"
 
 @protocol MotionEntityProtocol
 - (void)drawContent:(CGRect)rect withinContext: (CGContextRef)contextRef;
