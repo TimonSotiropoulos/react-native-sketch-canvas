@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "base/MotionEntity.h"
 #import "CloudEntity.h"
+#import <QuartzCore/QuartzCore.h>
 @import PocketSVG;
 
 @implementation CloudEntity
