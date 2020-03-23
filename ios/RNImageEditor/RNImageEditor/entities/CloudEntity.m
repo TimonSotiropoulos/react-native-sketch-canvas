@@ -75,103 +75,202 @@
 //    shape.addLine(to: CGPoint(x: 431.8, y: 228.1))
     [path addLineToPoint:CGPointMake(431.8, 228.1)];
 //    shape.addCurve(to: CGPoint(x: 446.1, y: 258), controlPoint1: CGPoint(x: 9.1, y: 7.4), controlPoint2: CGPoint(x: 14.3, y: 18.2))
+    [path addCurveToPoint:CGPointMake(446.1, 258) controlPoint1:CGPointMake(9.1, 7.4) controlPoint2:CGPointMake(14.3, 18.2)];
 //    shape.addCurve(to: CGPoint(x: 431.8, y: 287.9), controlPoint1: CGPoint(x: 0, y: 11.7), controlPoint2: CGPoint(x: -5.2, y: 22.5))
+    [path addCurveToPoint:CGPointMake(431.8, 287.9) controlPoint1:CGPointMake(0, 11.7) controlPoint2:CGPointMake(-5.2, 22.5)];
 //    shape.addLine(to: CGPoint(x: 422.2, y: 295.7))
+    [path addLineToPoint:CGPointMake(422.2, 295.7)];
 //    shape.addLine(to: CGPoint(x: 431.8, y: 303.5))
+    [path addLineToPoint:CGPointMake(431.8, 303.5)];
 //    shape.addCurve(to: CGPoint(x: 446.1, y: 333.4), controlPoint1: CGPoint(x: 9.1, y: 7.3), controlPoint2: CGPoint(x: 14.3, y: 18.2))
+    [path addCurveToPoint:CGPointMake(446.1, 333.4) controlPoint1:CGPointMake(9.1, 7.3) controlPoint2:CGPointMake(14.3, 18.2)];
 //    shape.addCurve(to: CGPoint(x: 433, y: 362.3), controlPoint1: CGPoint(x: 0, y: 11), controlPoint2: CGPoint(x: -4.8, y: 21.6))
+    [path addCurveToPoint:CGPointMake(433, 362.3) controlPoint1:CGPointMake(0, 11) controlPoint2:CGPointMake(-4.8, 21.6)];
 //    shape.addLine(to: CGPoint(x: 424.3, y: 369.9))
+    [path addLineToPoint:CGPointMake(424.3, 369.9)];
 //    shape.addLine(to: CGPoint(x: 433.1, y: 377.4))
+    [path addLineToPoint:CGPointMake(433.1, 377.4)];
 //    shape.addCurve(to: CGPoint(x: 446.7, y: 406.7), controlPoint1: CGPoint(x: 8.6, y: 7.3), controlPoint2: CGPoint(x: 13.6, y: 18))
+    [path addCurveToPoint:CGPointMake(446.7, 406.7) controlPoint1:CGPointMake(8.6, 7.3) controlPoint2:CGPointMake(13.6, 18)];
 //    shape.addCurve(to: CGPoint(x: 408.2, y: 445.2), controlPoint1: CGPoint(x: 0, y: 21.2), controlPoint2: CGPoint(x: -17.3, y: 38.5))
+    [path addCurveToPoint:CGPointMake(408.2, 445.2) controlPoint1:CGPointMake(0, 21.2) controlPoint2:CGPointMake(-17.3, 38.5)];
 //    shape.addCurve(to: CGPoint(x: 378.3, y: 430.9), controlPoint1: CGPoint(x: -11.7, y: 0), controlPoint2: CGPoint(x: -22.5, y: -5.2))
+    [path addCurveToPoint:CGPointMake(378.3, 430.9) controlPoint1:CGPointMake(-11.7, 0) controlPoint2:CGPointMake(-22.5, -5.2)];
 //    shape.addLine(to: CGPoint(x: 370.5, y: 421.3))
+    [path addLineToPoint:CGPointMake(370.5, 421.3)];
 //    shape.addLine(to: CGPoint(x: 362.7, y: 430.9))
+    [path addLineToPoint:CGPointMake(362.7, 430.9)];
 //    shape.addCurve(to: CGPoint(x: 332.8, y: 445.2), controlPoint1: CGPoint(x: -7.3, y: 9.1), controlPoint2: CGPoint(x: -18.2, y: 14.3))
+    [path addCurveToPoint:CGPointMake(332.8, 445.2) controlPoint1:CGPointMake(-7.3, 9.3) controlPoint2:CGPointMake(-18.2, 14.3)];
 //    shape.addCurve(to: CGPoint(x: 302.9, y: 430.9), controlPoint1: CGPoint(x: -11.7, y: 0), controlPoint2: CGPoint(x: -22.5, y: -5.2))
+    [path addCurveToPoint:CGPointMake(302.9, 430.9) controlPoint1:CGPointMake(-11.7, 0) controlPoint2:CGPointMake(-22.5, -5.2)];
 //    shape.addLine(to: CGPoint(x: 295.1, y: 421.3))
+    [path addLineToPoint:CGPointMake(295.1, 421.3)];
 //    shape.addLine(to: CGPoint(x: 287.3, y: 430.9))
+    [path addLineToPoint:CGPointMake(287.3, 430.9)];
 //    shape.addCurve(to: CGPoint(x: 257.4, y: 445.2), controlPoint1: CGPoint(x: -7.3, y: 9.1), controlPoint2: CGPoint(x: -18.2, y: 14.3))
+    [path addCurveToPoint:CGPointMake(257.4, 445.2) controlPoint1:CGPointMake(-7.3, 9.1) controlPoint2:CGPointMake(-18.2, 14.3)];
 //    shape.addCurve(to: CGPoint(x: 227.5, y: 430.9), controlPoint1: CGPoint(x: -11.7, y: 0), controlPoint2: CGPoint(x: -22.5, y: -5.2))
+    [path addCurveToPoint:CGPointMake(227.5, 430.9) controlPoint1:CGPointMake(-11.7, 0) controlPoint2:CGPointMake(-22.5, -5.2)];
 //    shape.addLine(to: CGPoint(x: 219.7, y: 421.3))
+    [path addLineToPoint:CGPointMake(219.7, 421.3)];
 //    shape.addLine(to: CGPoint(x: 211.9, y: 430.9))
+    [path addLineToPoint:CGPointMake(211.9, 430.9)];
 //    shape.addCurve(to: CGPoint(x: 182, y: 445.2), controlPoint1: CGPoint(x: -7.4, y: 9.1), controlPoint2: CGPoint(x: -18.2, y: 14.3))
+    [path addCurveToPoint:CGPointMake(182, 445.2) controlPoint1:CGPointMake(-7.4, 9.1) controlPoint2:CGPointMake(-18.2, 14.3)];
 //    shape.addCurve(to: CGPoint(x: 152.1, y: 430.9), controlPoint1: CGPoint(x: -11.7, y: 0), controlPoint2: CGPoint(x: -22.5, y: -5.2))
+    [path addCurveToPoint:CGPointMake(152.1, 430.9) controlPoint1:CGPointMake(-11.7, 0) controlPoint2:CGPointMake(-22.5, -5.2)];
 //    shape.addLine(to: CGPoint(x: 144.3, y: 421.3))
+    [path addLineToPoint:CGPointMake(144.3, 421.3)];
 //    shape.addLine(to: CGPoint(x: 136.5, y: 430.9))
+    [path addLineToPoint:CGPointMake(136.5, 430.9)];
 //    shape.addCurve(to: CGPoint(x: 106.6, y: 445.2), controlPoint1: CGPoint(x: -7.3, y: 9.1), controlPoint2: CGPoint(x: -18.2, y: 14.3))
+    [path addCurveToPoint:CGPointMake(106.6, 445.2) controlPoint1:CGPointMake(-7.3, 9.1) controlPoint2:CGPointMake(-18.2, 14.3)];
 //    shape.addCurve(to: CGPoint(x: 68.1, y: 406.7), controlPoint1: CGPoint(x: -21.2, y: 0), controlPoint2: CGPoint(x: -38.5, y: -17.3))
+    [path addCurveToPoint:CGPointMake(68.1, 406.7) controlPoint1:CGPointMake(-21.2, 0) controlPoint2:CGPointMake(-38.5, -17.3)];
 //    shape.addCurve(to: CGPoint(x: 80.7, y: 378.3), controlPoint1: CGPoint(x: 0, y: -10.8), controlPoint2: CGPoint(x: 4.6, y: -21.1))
+    [path addCurveToPoint:CGPointMake(80.7, 378.3) controlPoint1:CGPointMake(0, -10.8) controlPoint2:CGPointMake(4.6, -21.1)];
 //    shape.addLine(to: CGPoint(x: 89.3, y: 370.5))
+    [path addLineToPoint:CGPointMake(89.3, 370.5)];
 //    shape.addLine(to: CGPoint(x: 80.3, y: 363.2))
+    [path addLineToPoint:CGPointMake(80.3, 363.2)];
 //    shape.addCurve(to: CGPoint(x: 66.2, y: 333.4), controlPoint1: CGPoint(x: -9, y: -7.3), controlPoint2: CGPoint(x: -14.1, y: -18.2))
+    [path addCurveToPoint:CGPointMake(66.2, 333.4) controlPoint1:CGPointMake(-9, -7.3) controlPoint2:CGPointMake(-14.1, -18.2)];
 //    shape.addCurve(to: CGPoint(x: 80.5, y: 303.5), controlPoint1: CGPoint(x: 0, y: -11.7), controlPoint2: CGPoint(x: 5.2, y: -22.5))
+    [path addCurveToPoint:CGPointMake(80.5, 303.5) controlPoint1:CGPointMake(0, -11.7) controlPoint2:CGPointMake(5.2, -22.5)];
 //    shape.addLine(to: CGPoint(x: 90.1, y: 295.7))
+    [path addLineToPoint:CGPointMake(90.1, 295.7)];
 //    shape.addLine(to: CGPoint(x: 80.5, y: 287.9))
+    [path addLineToPoint:CGPointMake(80.6, 287.9)];
 //    shape.addCurve(to: CGPoint(x: 66.2, y: 258), controlPoint1: CGPoint(x: -9.1, y: -7.3), controlPoint2: CGPoint(x: -14.3, y: -18.2))
+    [path addCurveToPoint:CGPointMake(66.2, 258) controlPoint1:CGPointMake(-9.1, -7.3) controlPoint2:CGPointMake(-14.3, -18.2)];
 //    shape.addCurve(to: CGPoint(x: 80.5, y: 228.1), controlPoint1: CGPoint(x: 0, y: -11.7), controlPoint2: CGPoint(x: 5.2, y: -22.5))
+    [path addCurveToPoint:CGPointMake(80.5, 228.1) controlPoint1:CGPointMake(0, -11.7) controlPoint2:CGPointMake(5.2, -22.5)];
 //    shape.addLine(to: CGPoint(x: 90.1, y: 220.3))
+    [path addLineToPoint:CGPointMake(90.1, 220.3)];
 //    shape.addLine(to: CGPoint(x: 80.5, y: 212.5))
+    [path addLineToPoint:CGPointMake(80.5, 212.5)];
 //    shape.addCurve(to: CGPoint(x: 66.2, y: 182.6), controlPoint1: CGPoint(x: -9.1, y: -7.3), controlPoint2: CGPoint(x: -14.3, y: -18.2))
+    [path addCurveToPoint:CGPointMake(66.21, 182.6) controlPoint1:CGPointMake(-9.1, -7.3) controlPoint2:CGPointMake(-14.3, -18.2)];
 //    shape.addCurve(to: CGPoint(x: 81.6, y: 151.8), controlPoint1: CGPoint(x: 0, y: -12.2), controlPoint2: CGPoint(x: 5.6, y: -23.5))
+    [path addCurveToPoint:CGPointMake(81.6, 151.8) controlPoint1:CGPointMake(0, -12.2) controlPoint2:CGPointMake(5.6, -23.5)];
 //    shape.addLine(to: CGPoint(x: 91.7, y: 144.2))
+    [path addLineToPoint:CGPointMake(91.7, 144.2)];
 //    shape.addLine(to: CGPoint(x: 82, y: 136.1))
+    [path addLineToPoint:CGPointMake(82, 136.1)];
 //    shape.addCurve(to: CGPoint(x: 68.1, y: 106.5), controlPoint1: CGPoint(x: -8.8, y: -7.3), controlPoint2: CGPoint(x: -13.9, y: -18.1))
+    [path addCurveToPoint:CGPointMake(68.1, 106.5) controlPoint1:CGPointMake(-8.8, -7.3) controlPoint2:CGPointMake(-13.9, -18.1)];
 //    shape.addCurve(to: CGPoint(x: 106.6, y: 68), controlPoint1: CGPoint(x: 0, y: -21.2), controlPoint2: CGPoint(x: 17.3, y: -38.5))
+    [path addCurveToPoint:CGPointMake(106.6, 68) controlPoint1:CGPointMake(0, -21.2) controlPoint2:CGPointMake(17.3, -38.5)];
 //    shape.addCurve(to: CGPoint(x: 136.5, y: 82.3), controlPoint1: CGPoint(x: 11.7, y: 0), controlPoint2: CGPoint(x: 22.5, y: 5.2))
+    [path addCurveToPoint:CGPointMake(136.5, 82.3) controlPoint1:CGPointMake(11.7, 0) controlPoint2:CGPointMake(22.5, 5.2)];
 //    shape.addLine(to: CGPoint(x: 144.3, y: 91.9))
+    [path addLineToPoint:CGPointMake(144.3, 91.9)];
 //    shape.addLine(to: CGPoint(x: 152.1, y: 82.3))
+    [path addLineToPoint:CGPointMake(152.1, 82.3)];
 //    shape.addCurve(to: CGPoint(x: 182, y: 68), controlPoint1: CGPoint(x: 7.4, y: -9.1), controlPoint2: CGPoint(x: 18.2, y: -14.3))
+    [path addCurveToPoint:CGPointMake(182, 68) controlPoint1:CGPointMake(7.4, -9.1) controlPoint2:CGPointMake(18.2, -14.3)];
 //    shape.addCurve(to: CGPoint(x: 211.9, y: 82.3), controlPoint1: CGPoint(x: 11.7, y: 0), controlPoint2: CGPoint(x: 22.5, y: 5.2))
+    [path addCurveToPoint:CGPointMake(211.9, 82.3) controlPoint1:CGPointMake(11.7, 0) controlPoint2:CGPointMake(22.5, 5.2)];
 //    shape.addLine(to: CGPoint(x: 219.7, y: 91.9))
+    [path addLineToPoint:CGPointMake(219.7, 91.9)];
 //    shape.addLine(to: CGPoint(x: 227.5, y: 82.3))
+    [path addLineToPoint:CGPointMake(227.5, 82.3)];
 //    shape.addCurve(to: CGPoint(x: 257.4, y: 68), controlPoint1: CGPoint(x: 7.4, y: -9.1), controlPoint2: CGPoint(x: 18.2, y: -14.3))
+    [path addCurveToPoint:CGPointMake(257.4, 68) controlPoint1:CGPointMake(7.4, -9.1) controlPoint2:CGPointMake(18.2, -14.3)];
 //    shape.addCurve(to: CGPoint(x: 287.3, y: 82.3), controlPoint1: CGPoint(x: 11.7, y: 0), controlPoint2: CGPoint(x: 22.5, y: 5.2))
+    [path addCurveToPoint:CGPointMake(287.3, 82.3) controlPoint1:CGPointMake(11.7, 0) controlPoint2:CGPointMake(22.5, 5.2)];
 //    shape.addLine(to: CGPoint(x: 295.1, y: 91.9))
+    [path addLineToPoint:CGPointMake(295.1, 91.9)];
 //    shape.addLine(to: CGPoint(x: 302.9, y: 82.3))
+    [path addLineToPoint:CGPointMake(302.9, 82.3)];
 //    shape.addCurve(to: CGPoint(x: 332.8, y: 68), controlPoint1: CGPoint(x: 7.4, y: -9.1), controlPoint2: CGPoint(x: 18.2, y: -14.3))
+    [path addCurveToPoint:CGPointMake(332.8, 68) controlPoint1:CGPointMake(7.4, -9.1) controlPoint2:CGPointMake(18.2, -14.3)];
 //    shape.addCurve(to: CGPoint(x: 362.7, y: 82.3), controlPoint1: CGPoint(x: 11.7, y: 0), controlPoint2: CGPoint(x: 22.5, y: 5.2))
+    [path addCurveToPoint:CGPointMake(362.7, 82.3) controlPoint1:CGPointMake(11.7, 0) controlPoint2:CGPointMake(22.5, 5.2)];
 //    shape.addLine(to: CGPoint(x: 370.5, y: 91.9))
+    [path addLineToPoint:CGPointMake(370.5, 91.9)];
 //    shape.addLine(to: CGPoint(x: 378.3, y: 82.3))
+    [path addLineToPoint:CGPointMake(378.3, 82.3)];
 //    shape.addCurve(to: CGPoint(x: 408.2, y: 68), controlPoint1: CGPoint(x: 385.6, y: 73.2), controlPoint2: CGPoint(x: 396.5, y: 68))
+    [path addCurveToPoint:CGPointMake(408.2, 68) controlPoint1:CGPointMake(385.6, 73.2) controlPoint2:CGPointMake(396.5, 68)];
 //    shape.move(to: CGPoint(x: 408.2, y: 58))
+    [path moveToPoint:CGPointMake(408.2, 58)];
 //    shape.addCurve(to: CGPoint(x: 370.5, y: 76), controlPoint1: CGPoint(x: -15.2, y: 0), controlPoint2: CGPoint(x: -28.8, y: 7))
+    [path addCurveToPoint:CGPointMake(370.5, 76) controlPoint1:CGPointMake(-15.2, 0) controlPoint2:CGPointMake(-28.8, 7)];
 //    shape.addCurve(to: CGPoint(x: 332.8, y: 58), controlPoint1: CGPoint(x: -8.9, y: -11), controlPoint2: CGPoint(x: -22.5, y: -18))
+    [path addCurveToPoint:CGPointMake(332.8, 58) controlPoint1:CGPointMake(-8.9, -11) controlPoint2:CGPointMake(-22.5, -18)];
 //    shape.addCurve(to: CGPoint(x: 295.1, y: 76), controlPoint1: CGPoint(x: -15.2, y: 0), controlPoint2: CGPoint(x: -28.8, y: 7))
+    [path addCurveToPoint:CGPointMake(295.1, 76) controlPoint1:CGPointMake(-15.2, 0) controlPoint2:CGPointMake(-28.8, 7)];
 //    shape.addCurve(to: CGPoint(x: 257.4, y: 58), controlPoint1: CGPoint(x: -8.9, y: -11), controlPoint2: CGPoint(x: -22.5, y: -18))
+    [path addCurveToPoint:CGPointMake(257.4, 58) controlPoint1:CGPointMake(-8.9, -11) controlPoint2:CGPointMake(-22.5, -18)];
 //    shape.addCurve(to: CGPoint(x: 219.7, y: 76), controlPoint1: CGPoint(x: -15.2, y: 0), controlPoint2: CGPoint(x: -28.8, y: 7))
+    [path addCurveToPoint:CGPointMake(219.7, 76) controlPoint1:CGPointMake(-15.2, 0) controlPoint2:CGPointMake(-28.8, 7)];
 //    shape.addCurve(to: CGPoint(x: 182, y: 58), controlPoint1: CGPoint(x: -8.9, y: -11), controlPoint2: CGPoint(x: -22.5, y: -18))
+    [path addCurveToPoint:CGPointMake(182, 58) controlPoint1:CGPointMake(-8.9, -11) controlPoint2:CGPointMake(-22.5, -18)];
 //    shape.addCurve(to: CGPoint(x: 144.3, y: 76), controlPoint1: CGPoint(x: -15.2, y: 0), controlPoint2: CGPoint(x: -28.8, y: 7))
+    [path addCurveToPoint:CGPointMake(144.3, 76) controlPoint1:CGPointMake(-15.2, 0) controlPoint2:CGPointMake(-28.8, 7)];
 //    shape.addCurve(to: CGPoint(x: 106.6, y: 58), controlPoint1: CGPoint(x: -8.9, y: -11), controlPoint2: CGPoint(x: -22.5, y: -18))
+    [path addCurveToPoint:CGPointMake(106.6, 58) controlPoint1:CGPointMake(-8.9, -11) controlPoint2:CGPointMake(-22.5, -18)];
 //    shape.addCurve(to: CGPoint(x: 58.1, y: 106.5), controlPoint1: CGPoint(x: -26.8, y: 0), controlPoint2: CGPoint(x: -48.5, y: 21.7))
+    [path addCurveToPoint:CGPointMake(58.1, 106.5) controlPoint1:CGPointMake(-26.8, 0) controlPoint2:CGPointMake(-48.5, 21.7)];
 //    shape.addCurve(to: CGPoint(x: 75.6, y: 143.7), controlPoint1: CGPoint(x: 0, y: 15), controlPoint2: CGPoint(x: 6.8, y: 28.4))
+    [path addCurveToPoint:CGPointMake(75.6, 143.7) controlPoint1:CGPointMake(0, 15) controlPoint2:CGPointMake(6.8, 28.4)];
 //    shape.addCurve(to: CGPoint(x: 56.1, y: 182.5), controlPoint1: CGPoint(x: -11.8, y: 8.8), controlPoint2: CGPoint(x: -19.5, y: 22.9))
+    [path addCurveToPoint:CGPointMake(56.1, 182.5) controlPoint1:CGPointMake(-11.8, 8.8) controlPoint2:CGPointMake(-19.5, 22.9)];
 //    shape.addCurve(to: CGPoint(x: 74.1, y: 220.2), controlPoint1: CGPoint(x: 0, y: 15.2), controlPoint2: CGPoint(x: 7, y: 28.8))
+    [path addCurveToPoint:CGPointMake(74.1, 220.2) controlPoint1:CGPointMake(0, 15.2) controlPoint2:CGPointMake(7, 28.8)];
 //    shape.addCurve(to: CGPoint(x: 56.1, y: 257.9), controlPoint1: CGPoint(x: -11, y: 8.9), controlPoint2: CGPoint(x: -18, y: 22.5))
+    [path addCurveToPoint:CGPointMake(56.1, 257.9) controlPoint1:CGPointMake(-11, 8.9) controlPoint2:CGPointMake(-18, 22.5)];
 //    shape.addCurve(to: CGPoint(x: 74.1, y: 295.6), controlPoint1: CGPoint(x: 0, y: 15.2), controlPoint2: CGPoint(x: 7, y: 28.8))
+    [path addCurveToPoint:CGPointMake(74.1, 295.6) controlPoint1:CGPointMake(0, 15.2) controlPoint2:CGPointMake(7, 28.8)];
 //    shape.addCurve(to: CGPoint(x: 56.1, y: 333.3), controlPoint1: CGPoint(x: -11, y: 8.9), controlPoint2: CGPoint(x: -18, y: 22.5))
+    [path addCurveToPoint:CGPointMake(56.1, 333.3) controlPoint1:CGPointMake(-11, 8.9) controlPoint2:CGPointMake(-18, 22.5)];
 //    shape.addCurve(to: CGPoint(x: 73.9, y: 370.8), controlPoint1: CGPoint(x: 0, y: 15.1), controlPoint2: CGPoint(x: 6.9, y: 28.6))
+    [path addCurveToPoint:CGPointMake(73.9, 370.8) controlPoint1:CGPointMake(0, 15.1) controlPoint2:CGPointMake(6.9, 28.6)];
 //    shape.addCurve(to: CGPoint(x: 58.1, y: 406.6), controlPoint1: CGPoint(x: -9.7, y: 8.9), controlPoint2: CGPoint(x: -15.8, y: 21.6))
+    [path addCurveToPoint:CGPointMake(58.1, 406.6) controlPoint1:CGPointMake(-9.7, 8.9) controlPoint2:CGPointMake(-15.8, 21.6)];
 //    shape.addCurve(to: CGPoint(x: 106.6, y: 455.1), controlPoint1: CGPoint(x: 0, y: 26.8), controlPoint2: CGPoint(x: 21.7, y: 48.5))
+    [path addCurveToPoint:CGPointMake(106.6, 455.1) controlPoint1:CGPointMake(0, 26.8) controlPoint2:CGPointMake(21.7, 48.5)];
 //    shape.addCurve(to: CGPoint(x: 144.3, y: 437.1), controlPoint1: CGPoint(x: 15.2, y: 0), controlPoint2: CGPoint(x: 28.8, y: -7))
+    [path addCurveToPoint:CGPointMake(144.3, 437.1) controlPoint1:CGPointMake(15.2, 0) controlPoint2:CGPointMake(28.8, -7)];
 //    shape.addCurve(to: CGPoint(x: 182, y: 455.1), controlPoint1: CGPoint(x: 8.9, y: 11), controlPoint2: CGPoint(x: 22.5, y: 18))
+    [path addCurveToPoint:CGPointMake(182, 455.1) controlPoint1:CGPointMake(8.9, 11) controlPoint2:CGPointMake(22.5, 18)];
 //    shape.addCurve(to: CGPoint(x: 219.7, y: 437.1), controlPoint1: CGPoint(x: 15.2, y: 0), controlPoint2: CGPoint(x: 28.8, y: -7))
+    [path addCurveToPoint:CGPointMake(219.7, 437.1) controlPoint1:CGPointMake(15.2, 0) controlPoint2:CGPointMake(28.8, -7)];
 //    shape.addCurve(to: CGPoint(x: 257.4, y: 455.1), controlPoint1: CGPoint(x: 8.9, y: 11), controlPoint2: CGPoint(x: 22.5, y: 18))
+    [path addCurveToPoint:CGPointMake(257.4, 455.1) controlPoint1:CGPointMake(8.9, 11) controlPoint2:CGPointMake(22.5, 18)];
 //    shape.addCurve(to: CGPoint(x: 295.1, y: 437.1), controlPoint1: CGPoint(x: 15.2, y: 0), controlPoint2: CGPoint(x: 28.8, y: -7))
+    [path addCurveToPoint:CGPointMake(295.1, 437.1) controlPoint1:CGPointMake(15.2, 0) controlPoint2:CGPointMake(28.8, -7)];
 //    shape.addCurve(to: CGPoint(x: 332.8, y: 455.1), controlPoint1: CGPoint(x: 8.9, y: 11), controlPoint2: CGPoint(x: 22.5, y: 18))
+    [path addCurveToPoint:CGPointMake(332.8, 455.1) controlPoint1:CGPointMake(8.9, 11) controlPoint2:CGPointMake(22.5, 18)];
 //    shape.addCurve(to: CGPoint(x: 370.5, y: 437.1), controlPoint1: CGPoint(x: 15.2, y: 0), controlPoint2: CGPoint(x: 28.8, y: -7))
+    [path addCurveToPoint:CGPointMake(370.5, 437.1) controlPoint1:CGPointMake(15.2, 0) controlPoint2:CGPointMake(28.8, -7)];
 //    shape.addCurve(to: CGPoint(x: 408.2, y: 455.1), controlPoint1: CGPoint(x: 8.9, y: 11), controlPoint2: CGPoint(x: 22.5, y: 18))
+    [path addCurveToPoint:CGPointMake(408.2, 455.1) controlPoint1:CGPointMake(8.9, 11) controlPoint2:CGPointMake(22.5, 18)];
 //    shape.addCurve(to: CGPoint(x: 456.7, y: 406.6), controlPoint1: CGPoint(x: 26.8, y: 0), controlPoint2: CGPoint(x: 48.5, y: -21.7))
+    [path addCurveToPoint:CGPointMake(456.7, 406.6) controlPoint1:CGPointMake(26.8, 0) controlPoint2:CGPointMake(48.5, -21.7)];
 //    shape.addCurve(to: CGPoint(x: 439.6, y: 369.6), controlPoint1: CGPoint(x: 0, y: -14.8), controlPoint2: CGPoint(x: -6.7, y: -28.1))
+    [path addCurveToPoint:CGPointMake(439.6, 369.6) controlPoint1:CGPointMake(0, -14.8) controlPoint2:CGPointMake(-6.7, -28.1)];
 //    shape.addCurve(to: CGPoint(x: 456.1, y: 333.2), controlPoint1: CGPoint(x: 10.1, y: -8.9), controlPoint2: CGPoint(x: 16.5, y: -21.9))
+    [path addCurveToPoint:CGPointMake(456.1, 333.2) controlPoint1:CGPointMake(10.1, -8.9) controlPoint2:CGPointMake(16.5, -21.9)];
 //    shape.addCurve(to: CGPoint(x: 438.1, y: 295.5), controlPoint1: CGPoint(x: 0, y: -15.2), controlPoint2: CGPoint(x: -7, y: -28.8))
+    [path addCurveToPoint:CGPointMake(438.1, 295.5) controlPoint1:CGPointMake(0, -15.2) controlPoint2:CGPointMake(-7, -28.8)];
 //    shape.addCurve(to: CGPoint(x: 456.1, y: 257.8), controlPoint1: CGPoint(x: 11, y: -8.9), controlPoint2: CGPoint(x: 18, y: -22.5))
+    [path addCurveToPoint:CGPointMake(456.1, 257.8) controlPoint1:CGPointMake(11, -8.9) controlPoint2:CGPointMake(18, -22.5)];
 //    shape.addCurve(to: CGPoint(x: 438.1, y: 220.1), controlPoint1: CGPoint(x: 0, y: -15.2), controlPoint2: CGPoint(x: -7, y: -28.8))
+    [path addCurveToPoint:CGPointMake(438.1, 220.1) controlPoint1:CGPointMake(0, -15.2) controlPoint2:CGPointMake(-7, -28.8)];
 //    shape.addCurve(to: CGPoint(x: 456.1, y: 182.4), controlPoint1: CGPoint(x: 11, y: -8.9), controlPoint2: CGPoint(x: 18, y: -22.5))
+    [path addCurveToPoint:CGPointMake(456.1, 182.4) controlPoint1:CGPointMake(11, -8.9) controlPoint2:CGPointMake(18, -22.5)];
 //    shape.addCurve(to: CGPoint(x: 438, y: 144.6), controlPoint1: CGPoint(x: 0, y: -15.3), controlPoint2: CGPoint(x: -7.1, y: -28.9))
+    [path addCurveToPoint:CGPointMake(438, 144.6) controlPoint1:CGPointMake(0, -15.3) controlPoint2:CGPointMake(-7.1, -28.9)];
 //    shape.addCurve(to: CGPoint(x: 456.8, y: 106.3), controlPoint1: CGPoint(x: 11.4, y: -8.9), controlPoint2: CGPoint(x: 18.8, y: -22.7))
+    [path addCurveToPoint:CGPointMake(456.8, 106.3) controlPoint1:CGPointMake(11.4, -8.9) controlPoint2:CGPointMake(18.8, -22.7)];
 //    shape.addCurve(to: CGPoint(x: 408.2, y: 58), controlPoint1: CGPoint(x: 456.6, y: 79.7), controlPoint2: CGPoint(x: 434.9, y: 58))
+    [path addCurveToPoint:CGPointMake(408.2, 58) controlPoint1:CGPointMake(456.6, 79.7) controlPoint2:CGPointMake(434.9, 58)];
 //    shape.addLine(to: CGPoint(x: 408.2, y: 58))
+    [path addLineToPoint:CGPointMake(408.2, 58)];
+    [path closePath];
     return path;
 }
 
