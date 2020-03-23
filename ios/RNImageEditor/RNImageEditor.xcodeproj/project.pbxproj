@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0084F70D01519044A00E1194 /* Pods_RNImageEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA453F5CE940FC9E877EC2C /* Pods_RNImageEditor.framework */; };
 		8579D13721889DE500773C27 /* TextEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 8579D13621889DE500773C27 /* TextEntity.m */; };
 		858EE6372180DFBD009C9E08 /* CircleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 858EE6362180DFBD009C9E08 /* CircleEntity.m */; };
 		85C9F6F2218879DB00BD64B4 /* RectEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F6F1218879DB00BD64B4 /* RectEntity.m */; };
 		85C9F6F5218885F400BD64B4 /* TriangleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F6F4218885F400BD64B4 /* TriangleEntity.m */; };
 		85E432F5218892CD00FDDA74 /* ArrowEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E432F4218892CD00FDDA74 /* ArrowEntity.m */; };
-		93029520242920D700FBBF35 /* SVGEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9302951B242920D600FBBF35 /* SVGEngine.mm */; };
-		93029521242920D700FBBF35 /* SVGBezierPath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9302951E242920D700FBBF35 /* SVGBezierPath.mm */; };
 		930295272429232A00FBBF35 /* cloud.svg in Resources */ = {isa = PBXBuildFile; fileRef = 930295252429231D00FBBF35 /* cloud.svg */; };
 		9302952A242925F600FBBF35 /* CloudEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 93029529242925F600FBBF35 /* CloudEntity.m */; };
 		D70446F6229682C5007BBE77 /* BackgroundText.m in Sources */ = {isa = PBXBuildFile; fileRef = D70446F5229682C5007BBE77 /* BackgroundText.m */; };
@@ -49,19 +48,17 @@
 		85C9F6F4218885F400BD64B4 /* TriangleEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriangleEntity.m; sourceTree = "<group>"; };
 		85E432F3218892AE00FDDA74 /* ArrowEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowEntity.h; sourceTree = "<group>"; };
 		85E432F4218892CD00FDDA74 /* ArrowEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowEntity.m; sourceTree = "<group>"; };
-		9302951B242920D600FBBF35 /* SVGEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SVGEngine.mm; sourceTree = "<group>"; };
-		9302951C242920D700FBBF35 /* SVGPortability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGPortability.h; sourceTree = "<group>"; };
-		9302951D242920D700FBBF35 /* SVGEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGEngine.h; sourceTree = "<group>"; };
-		9302951E242920D700FBBF35 /* SVGBezierPath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SVGBezierPath.mm; sourceTree = "<group>"; };
-		9302951F242920D700FBBF35 /* SVGBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVGBezierPath.h; sourceTree = "<group>"; };
 		930295252429231D00FBBF35 /* cloud.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = cloud.svg; sourceTree = "<group>"; };
 		93029528242925F600FBBF35 /* CloudEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntity.h; sourceTree = "<group>"; };
 		93029529242925F600FBBF35 /* CloudEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudEntity.m; sourceTree = "<group>"; };
+		B20A739C549F39CE834C4000 /* Pods-RNImageEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNImageEditor.debug.xcconfig"; path = "Target Support Files/Pods-RNImageEditor/Pods-RNImageEditor.debug.xcconfig"; sourceTree = "<group>"; };
+		CDA453F5CE940FC9E877EC2C /* Pods_RNImageEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNImageEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70446F422968240007BBE77 /* BackgroundText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundText.h; sourceTree = "<group>"; };
 		D70446F5229682C5007BBE77 /* BackgroundText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundText.m; sourceTree = "<group>"; };
 		D7B7D3E1217DE92C00902B8C /* Enumerations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enumerations.h; sourceTree = "<group>"; };
 		D7BC8411217F4FE600A275D3 /* MotionEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionEntity.h; sourceTree = "<group>"; };
 		D7BC84172180814600A275D3 /* MotionEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionEntity.m; sourceTree = "<group>"; };
+		D7D6C2E147924AAE409361BE /* Pods-RNImageEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNImageEditor.release.xcconfig"; path = "Target Support Files/Pods-RNImageEditor/Pods-RNImageEditor.release.xcconfig"; sourceTree = "<group>"; };
 		DE0C997E1F32D596001BDE8B /* RNImageEditorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNImageEditorData.h; sourceTree = "<group>"; };
 		DE0C997F1F32D596001BDE8B /* RNImageEditorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNImageEditorData.m; sourceTree = "<group>"; };
 		DEB694851F322F2A00DC6841 /* RNImageEditorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNImageEditorManager.h; sourceTree = "<group>"; };
@@ -78,23 +75,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0084F70D01519044A00E1194 /* Pods_RNImageEditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CB341799E561377239CD187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDA453F5CE940FC9E877EC2C /* Pods_RNImageEditor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		85C9F6F6218890F700BD64B4 /* base */ = {
 			isa = PBXGroup;
 			children = (
 				D7B7D3E1217DE92C00902B8C /* Enumerations.h */,
 				D7BC8411217F4FE600A275D3 /* MotionEntity.h */,
 				D7BC84172180814600A275D3 /* MotionEntity.m */,
-				9302951F242920D700FBBF35 /* SVGBezierPath.h */,
-				9302951E242920D700FBBF35 /* SVGBezierPath.mm */,
-				9302951D242920D700FBBF35 /* SVGEngine.h */,
-				9302951B242920D600FBBF35 /* SVGEngine.mm */,
-				9302951C242920D700FBBF35 /* SVGPortability.h */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -133,6 +134,8 @@
 			children = (
 				DEFBA25A1F322B6000A4545C /* RNImageEditor */,
 				DEFBA2591F322B6000A4545C /* Products */,
+				E69A7B5ACABE04E0A300835B /* Pods */,
+				3CB341799E561377239CD187 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +165,15 @@
 			path = RNImageEditor;
 			sourceTree = "<group>";
 		};
+		E69A7B5ACABE04E0A300835B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B20A739C549F39CE834C4000 /* Pods-RNImageEditor.debug.xcconfig */,
+				D7D6C2E147924AAE409361BE /* Pods-RNImageEditor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEFBA2611F322B6000A4545C /* Build configuration list for PBXNativeTarget "RNImageEditor" */;
 			buildPhases = (
+				6253286037AF3048E335BD23 /* [CP] Check Pods Manifest.lock */,
 				DEFBA2541F322B5F00A4545C /* Sources */,
 				DEFBA2551F322B5F00A4545C /* Frameworks */,
 				DEFBA2561F322B5F00A4545C /* CopyFiles */,
@@ -227,6 +240,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6253286037AF3048E335BD23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNImageEditor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DEFBA2541F322B5F00A4545C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -234,7 +272,6 @@
 			files = (
 				DEFBA25D1F322B6000A4545C /* RNImageEditor.m in Sources */,
 				8579D13721889DE500773C27 /* TextEntity.m in Sources */,
-				93029520242920D700FBBF35 /* SVGEngine.mm in Sources */,
 				DED3A13720A4159A00D72FBF /* RNImageEditorUtility.m in Sources */,
 				85C9F6F2218879DB00BD64B4 /* RectEntity.m in Sources */,
 				DE0C99801F32D596001BDE8B /* RNImageEditorData.m in Sources */,
@@ -244,7 +281,6 @@
 				858EE6372180DFBD009C9E08 /* CircleEntity.m in Sources */,
 				85E432F5218892CD00FDDA74 /* ArrowEntity.m in Sources */,
 				85C9F6F5218885F400BD64B4 /* TriangleEntity.m in Sources */,
-				93029521242920D700FBBF35 /* SVGBezierPath.mm in Sources */,
 				DEB694891F322F2A00DC6841 /* RNImageEditorManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +390,7 @@
 		};
 		DEFBA2621F322B6000A4545C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B20A739C549F39CE834C4000 /* Pods-RNImageEditor.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../react-native/React/**";
 				OTHER_LDFLAGS = "-ObjC";
@@ -364,6 +401,7 @@
 		};
 		DEFBA2631F322B6000A4545C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7D6C2E147924AAE409361BE /* Pods-RNImageEditor.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../react-native/React/**";
 				OTHER_LDFLAGS = "-ObjC";

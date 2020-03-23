@@ -1,24 +1,9 @@
 /*
-    This file is part of the PocketSVG package.
-    Copyright (c) Ponderwell, Ariel Elkin, Fjölnir Ásgeirsson, and Contributors
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-    THE SOFTWARE.
+ * This file is part of the PocketSVG package.
+ * Copyright (c) Ponderwell, Ariel Elkin, Fjölnir Ásgeirsson, and Contributors
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 #import <libxml/xmlreader.h>
@@ -456,16 +441,6 @@ NSArray *CGPathsFromSVGString(NSString * const svgString, SVGAttributeSet **outA
     return paths;
 }
 
-/// This parses a single isolated path. creating a cgpath from just a string formated like the d elemen in a path
-CGPathRef CGPathFromSVGPathString(NSString *svgString) {
-    CGPathRef const path = pathDefinitionParser(svgString).parse();
-    if(!path) {
-        NSLog(@"*** Error: Invalid path attribute");
-        return NULL;
-    } else
-        return path;
-}
-
 NSString *SVGStringFromCGPaths(NSArray * const paths, SVGAttributeSet * const attributes)
 {
     CGRect bounds = CGRectZero;
@@ -617,11 +592,9 @@ void pathDefinitionParser::appendMoveTo()
     }
 
     for(NSUInteger i = 0; i < _operands.size(); i += 2) {
-        CGPoint currentPoint = (_cmd == 'm' && !CGPathIsEmpty(_path))
-            ? CGPathGetCurrentPoint(_path)
-            : CGPointZero;
-        CGFloat x = _operands[i+0] + currentPoint.x;
-        CGFloat y = _operands[i+1] + currentPoint.y;
+        CGPoint currentPoint = CGPathGetCurrentPoint(_path);
+        CGFloat x = _operands[i+0] + (_cmd == 'm' ? currentPoint.x : 0);
+        CGFloat y = _operands[i+1] + (_cmd == 'm' ? currentPoint.y : 0);
 
         if(i == 0)
             CGPathMoveToPoint(_path, NULL, x, y);
@@ -1031,12 +1004,25 @@ static NSString *_SVGFormatNumber(NSNumber * const aNumber)
 @implementation NSValue (PocketSVG)
 + (instancetype)svg_valueWithCGAffineTransform:(CGAffineTransform)aTransform
 {
+#if TARGET_OS_IPHONE
     return [self valueWithCGAffineTransform:aTransform];
+#else
+    return [self valueWithBytes:&aTransform objCType:@encode(CGAffineTransform)];
+#endif
 }
 
 - (CGAffineTransform)svg_CGAffineTransformValue
 {
+#if TARGET_OS_IPHONE
     return [self CGAffineTransformValue];
+#else
+    if(strcmp(self.objCType, @encode(CGAffineTransform)) == 0) {
+        CGAffineTransform transform;
+        [self getValue:&transform];
+        return transform;
+    } else
+        return (CGAffineTransform) {0};
+#endif
 }
 @end
 
