@@ -54,7 +54,12 @@
     }
     
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"cloud" withExtension:@"svg"];
-    [self setSvgPaths:[SVGBezierPath pathsFromSVGAtURL:url]];
+    if (url == nil) {
+        NSLog(@"SKETCH ERR: url not found");
+    } else {
+        NSLog(@"%@", [url absoluteString]);
+//        [self setSvgPaths:[SVGBezierPath pathsFromSVGAtURL:url]];
+    }
     
     return self;
 }
@@ -66,7 +71,7 @@
 
     if ([self hasSvgPaths]) {
         CALayer *layer = [[CALayer alloc] init];
-        for (SVGBezierPath *path in self.svgPaths) {
+        for (UIBezierPath *path in self.svgPaths) {
             CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
             [shapeLayer setPath:[path CGPath]];
             [shapeLayer setFillColor:[self.entityStrokeColor CGColor]];
