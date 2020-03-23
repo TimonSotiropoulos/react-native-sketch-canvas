@@ -12,6 +12,7 @@
 		85C9F6F2218879DB00BD64B4 /* RectEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F6F1218879DB00BD64B4 /* RectEntity.m */; };
 		85C9F6F5218885F400BD64B4 /* TriangleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C9F6F4218885F400BD64B4 /* TriangleEntity.m */; };
 		85E432F5218892CD00FDDA74 /* ArrowEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E432F4218892CD00FDDA74 /* ArrowEntity.m */; };
+		9302953A242951E200FBBF35 /* CloudEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 93029538242951E200FBBF35 /* CloudEntity.m */; };
 		D70446F6229682C5007BBE77 /* BackgroundText.m in Sources */ = {isa = PBXBuildFile; fileRef = D70446F5229682C5007BBE77 /* BackgroundText.m */; };
 		D7BC84182180814600A275D3 /* MotionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BC84172180814600A275D3 /* MotionEntity.m */; };
 		DE0C99801F32D596001BDE8B /* RNImageEditorData.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0C997F1F32D596001BDE8B /* RNImageEditorData.m */; };
@@ -45,6 +46,8 @@
 		85C9F6F4218885F400BD64B4 /* TriangleEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriangleEntity.m; sourceTree = "<group>"; };
 		85E432F3218892AE00FDDA74 /* ArrowEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowEntity.h; sourceTree = "<group>"; };
 		85E432F4218892CD00FDDA74 /* ArrowEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowEntity.m; sourceTree = "<group>"; };
+		93029538242951E200FBBF35 /* CloudEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudEntity.m; sourceTree = "<group>"; };
+		93029539242951E200FBBF35 /* CloudEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudEntity.h; sourceTree = "<group>"; };
 		D70446F422968240007BBE77 /* BackgroundText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundText.h; sourceTree = "<group>"; };
 		D70446F5229682C5007BBE77 /* BackgroundText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundText.m; sourceTree = "<group>"; };
 		D7B7D3E1217DE92C00902B8C /* Enumerations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enumerations.h; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				85C9F6F6218890F700BD64B4 /* base */,
 				858EE6312180DEC5009C9E08 /* CircleEntity.h */,
 				858EE6362180DFBD009C9E08 /* CircleEntity.m */,
+				93029539242951E200FBBF35 /* CloudEntity.h */,
+				93029538242951E200FBBF35 /* CloudEntity.m */,
 				85C9F6F0218878DB00BD64B4 /* RectEntity.h */,
 				85C9F6F1218879DB00BD64B4 /* RectEntity.m */,
 				85C9F6F3218885C600BD64B4 /* TriangleEntity.h */,
@@ -200,6 +205,7 @@
 				D70446F6229682C5007BBE77 /* BackgroundText.m in Sources */,
 				D7BC84182180814600A275D3 /* MotionEntity.m in Sources */,
 				858EE6372180DFBD009C9E08 /* CircleEntity.m in Sources */,
+				9302953A242951E200FBBF35 /* CloudEntity.m in Sources */,
 				85E432F5218892CD00FDDA74 /* ArrowEntity.m in Sources */,
 				85C9F6F5218885F400BD64B4 /* TriangleEntity.m in Sources */,
 				DEB694891F322F2A00DC6841 /* RNImageEditorManager.m in Sources */,
