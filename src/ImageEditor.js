@@ -198,6 +198,16 @@ class ImageEditor extends React.Component {
       }
     }
 
+    onShapePositionUpdate(shapePositionUpdate, shapeID, shapeX, shapeY) {
+      this._shapes = this._shapes.map((shape) => {
+        if (shape.id === shapeID) {
+          shape.x = shapeX;
+          shape.y = shapeY;
+        }
+        return shape;
+      });
+    }
+
     addPath(data) {
         if (this._initialized) {
             if (this._paths.filter((p) => p.path.id === data.path.id).length === 0) {
@@ -234,7 +244,7 @@ class ImageEditor extends React.Component {
     addShape(config) {
         if (config) {
             let id =  Math.random().toString(36).substr(2, 9);
-            this._shapes.push({ id, ...config });
+            this._shapes.push({ id, ...config, x: 0, y: 0 });
             this._history.push({ type: SHAPE, id: id });
             let fontSize = config.textShapeFontSize ? config.textShapeFontSize : 0;
             UIManager.dispatchViewManagerCommand(
@@ -437,6 +447,8 @@ class ImageEditor extends React.Component {
                         this.props.onSketchSaved(e.nativeEvent.success);
                     } else if (e.nativeEvent.hasOwnProperty("isShapeSelected")) {
                         this.props.onShapeSelectionChanged(e.nativeEvent.isShapeSelected);
+                    } else if (e.nativeEvent.hasOwnProperty("shapePositionUpdate")) {
+                      this.props.onShapePositionUpdate(e.nativeEvent.shapePositionUpdate, e.nativeEvent.shapeID, e.nativeEvent.shapeX, e.nativeEvent.shapeY);
                     }
                 }}
                 localSourceImage={this.props.localSourceImage}

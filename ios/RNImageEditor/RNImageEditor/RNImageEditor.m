@@ -938,7 +938,9 @@
     UIGestureRecognizerState state = [sender state];
     if (self.selectedEntity) {
         if (state != UIGestureRecognizerStateCancelled) {
-            [self.selectedEntity moveEntityTo:[sender translationInView:self.selectedEntity]];
+            CGPoint nextPosition = [sender translationInView:self.selectedEntity];
+            [self.selectedEntity moveEntityTo: nextPosition];
+            [self notifyShapePositionUpdate: nextPosition];
             [sender setTranslation:CGPointZero inView:sender.view];
             [self setNeedsDisplayInRect:self.selectedEntity.bounds];
         }
@@ -1004,6 +1006,12 @@
 - (void)notifyPathsUpdate {
     if (_onChange) {
         _onChange(@{ @"pathsUpdate": @(_paths.count) });
+    }
+}
+
+- (void)notifyShapePositionUpdate: (CGPoint) position {
+    if (_onChange) {
+        _onChange(@{@"shapePositionUpdate": @YES, @"shapeID": _selectedEntity.entityId, @"shapeX": @(position.x), @"shapeY": @(position.y)});
     }
 }
 
