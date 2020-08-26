@@ -185,6 +185,19 @@ class ImageEditor extends React.Component {
         }
     }
 
+    positionSelectedEntity(x, y) {
+      if (this._initialized) {
+          UIManager.dispatchViewManagerCommand(
+              this._handle,
+              UIManager.getViewManagerConfig(RNImageEditor).Commands.positionSelectedEntity,
+              [x, y]
+          );
+      } else {
+          this._pathsToProcess.filter((p) => p.path.id === data.path.id).length === 0 &&
+              this._pathsToProcess.push(data);
+      }
+    }
+
     addPath(data) {
         if (this._initialized) {
             if (this._paths.filter((p) => p.path.id === data.path.id).length === 0) {
