@@ -821,6 +821,12 @@
     self.selectedEntity = entity;
 }
 
+- (void)positionSelectedEntity:(CGPoint)point {
+    if (self.selectedEntity) {
+        [self.selectedEntity moveEntityTo:point];
+    }
+}
+
 - (void)updateSelectionOnTapWithLocationPoint:(CGPoint)tapLocation {
     MotionEntity *nextEntity = [self findEntityAtPointX:tapLocation.x andY:tapLocation.y];
     [self onShapeSelectionChanged:nextEntity];

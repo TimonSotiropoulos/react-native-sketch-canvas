@@ -82,6 +82,14 @@ RCT_EXPORT_METHOD(addPoint:(nonnull NSNumber *)reactTag x: (float)x y: (float)y 
     }];
 }
 
+RCT_EXPORT_METHOD(positionSelectedEntity:(nonnull NSNumber *)reactTag x: (float)x y: (float)y)
+{
+    [self runCanvas:reactTag block:^(RNImageEditor *canvas) {
+        CGPoint point = CGPointMake(x, y);
+        [canvas positionSelectedEntity:point];
+    }];
+}
+
 RCT_EXPORT_METHOD(addPath:(nonnull NSNumber *)reactTag pathId: (int) pathId strokeColor: (UIColor*) strokeColor strokeWidth: (int) strokeWidth points: (NSArray*) points)
 {
     NSMutableArray *cgPoints = [[NSMutableArray alloc] initWithCapacity: points.count];
