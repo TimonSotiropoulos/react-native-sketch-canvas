@@ -200,6 +200,9 @@ class ImageEditor extends React.Component {
 
     onShapePositionUpdate(shapePositionUpdate, shapeID, transform, center) {
       this._shapes = this._shapes.map((shape) => {
+        console.log("TRANSFORM HAPPENING UPDATING SHAPE!");
+        console.log(shape.id);
+        console.log(shapeID);
         if (shape.id === shapeID) {
           shape.transform = transform;
           shape.center = center;
@@ -243,7 +246,7 @@ class ImageEditor extends React.Component {
 
     addShape(config) {
         if (config) {
-            let id =  Math.random().toString(36).substr(2, 9);
+            let id = config.id || Math.random().toString(36).substr(2, 9);
             this._shapes.push({ id, ...config });
             this._history.push({ type: SHAPE, id: id });
             let fontSize = config.textShapeFontSize ? config.textShapeFontSize : 0;
