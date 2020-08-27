@@ -198,11 +198,11 @@ class ImageEditor extends React.Component {
       }
     }
 
-    onShapePositionUpdate(shapePositionUpdate, shapeID, shapeX, shapeY) {
+    onShapePositionUpdate(shapePositionUpdate, shapeID, transform, center) {
       this._shapes = this._shapes.map((shape) => {
         if (shape.id === shapeID) {
-          shape.x = shapeX;
-          shape.y = shapeY;
+          shape.transform = transform;
+          shape.center = center;
         }
         return shape;
       });
@@ -448,7 +448,7 @@ class ImageEditor extends React.Component {
                     } else if (e.nativeEvent.hasOwnProperty("isShapeSelected")) {
                         this.props.onShapeSelectionChanged(e.nativeEvent.isShapeSelected);
                     } else if (e.nativeEvent.hasOwnProperty("shapePositionUpdate")) {
-                        this.onShapePositionUpdate(e.nativeEvent.shapePositionUpdate, e.nativeEvent.shapeID, e.nativeEvent.shapeX, e.nativeEvent.shapeY);
+                        this.onShapePositionUpdate(e.nativeEvent.shapePositionUpdate, e.nativeEvent.shapeID, e.nativeEvent.transform, e.nativeEvent.center);
                     }
                 }}
                 localSourceImage={this.props.localSourceImage}
