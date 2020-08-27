@@ -244,7 +244,7 @@ class ImageEditor extends React.Component {
     addShape(config) {
         if (config) {
             let id =  Math.random().toString(36).substr(2, 9);
-            this._shapes.push({ id, ...config, x: 0, y: 0 });
+            this._shapes.push({ id, ...config });
             this._history.push({ type: SHAPE, id: id });
             let fontSize = config.textShapeFontSize ? config.textShapeFontSize : 0;
             UIManager.dispatchViewManagerCommand(
