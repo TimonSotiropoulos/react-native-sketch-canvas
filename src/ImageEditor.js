@@ -209,6 +209,15 @@ class ImageEditor extends React.Component {
       });
     }
 
+    onShapeColourUpdate(shapeColourUpdate, shapeID, colour) {
+      this._shapes = this._shapes.map((shape) => {
+        if (shape.id === shapeID) {
+          shape.colour = colour;
+        }
+        return shape;
+      });
+    }
+
     addPath(data) {
         // Hardcoded break, if a shape is selected, we dont want to add any paths
         if (this._initialized) {
@@ -252,7 +261,7 @@ class ImageEditor extends React.Component {
             UIManager.dispatchViewManagerCommand(
                 this._handle,
                 UIManager.getViewManagerConfig(RNImageEditor).Commands.addShape,
-                [id, config.shapeType, config.textShapeFontType, fontSize, config.textShapeText, config.imageShapeAsset, config.transform, config.center]
+                [id, config.shapeType, config.textShapeFontType, fontSize, config.textShapeText, config.imageShapeAsset, config.transform, config.center, config.colour]
             );
         }
     }
@@ -457,6 +466,8 @@ class ImageEditor extends React.Component {
                         this.props.onShapeSelectionChanged(e.nativeEvent.isShapeSelected);
                     } else if (e.nativeEvent.hasOwnProperty("shapePositionUpdate")) {
                         this.onShapePositionUpdate(e.nativeEvent.shapePositionUpdate, e.nativeEvent.shapeID, e.nativeEvent.transform, e.nativeEvent.center);
+                    } else if (e.nativeEvent.hasOwnProperty("shapeColourUpdate")) {
+                        this.onShapeColourUpdate(e.nativeEvent.shapeColour, e.nativeEvent.shapeID, e.nativeEvent.colour);
                     }
                 }}
                 localSourceImage={this.props.localSourceImage}

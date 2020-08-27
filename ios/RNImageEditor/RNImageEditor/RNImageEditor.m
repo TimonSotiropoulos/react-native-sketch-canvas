@@ -145,6 +145,7 @@
                    entityStrokeColor:self.entityStrokeColor];
 
         if ([entity isSelected]) {
+            [self notifyShapeColourUpdate: self.entityStrokeColor];
             [entity setNeedsDisplay];
         }
 
@@ -594,7 +595,11 @@
     }
 }
 
-- (void)addEntityWithId:(NSString *)entityId entityType:(NSString *)entityType textShapeFontType:(NSString *)textShapeFontType textShapeFontSize:(NSNumber *)textShapeFontSize textShapeText:(NSString *)textShapeText imageShapeAsset:(NSString *)imageShapeAsset transform:(NSString *)transform center:(NSString *)center {
+- (void)addEntityWithId:(NSString *)entityId entityType:(NSString *)entityType textShapeFontType:(NSString *)textShapeFontType textShapeFontSize:(NSNumber *)textShapeFontSize textShapeText:(NSString *)textShapeText imageShapeAsset:(NSString *)imageShapeAsset transform:(NSString *)transform center:(NSString *)center colour:(UIColor *) colour {
+
+    if ( colour != nil ) {
+       self.entityStrokeColor = colour;
+    }
 
     switch ([@[@"Circle", @"Rect", @"Square", @"Triangle", @"Arrow", @"Text", @"Image", @"Cloud", @"Line"] indexOfObject: entityType]) {
         case 1:
@@ -632,6 +637,9 @@
     if ( transform != nil ) {
         self.selectedEntity.transform = CGAffineTransformFromString(transform);
     }
+
+
+
 }
 
 - (void)addCircleEntity:(NSString *)entityId {
@@ -1009,6 +1017,12 @@
     }  // StateBegan if
 }
 
+- (NSString *) colorToString:(UIColor *) color {
+    CGFloat red, green, blue, alpha;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    return [NSString stringWithFormat:@"#%02x%02x%02x", (int)(red * 255), (int)(green * 255) , (int)(blue * 255)];
+}
+
 #pragma mark - Outgoing events
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo: (void *) contextInfo {
     if (_onChange) {
@@ -1025,6 +1039,13 @@
 - (void)notifyShapePositionUpdate: (NSString *)transform center:(NSString *)center {
     if (_onChange) {
         _onChange(@{@"shapePositionUpdate": @YES, @"shapeID": _selectedEntity.entityId, @"transform": transform, @"center": center});
+    }
+}
+
+- (void)notifyShapeColourUpdate: (UIColor *)colour {
+    if (_onChange && _selectedEntity) {
+        NSString* colourString = [self colorToString: colour];
+        _onChange(@{@"shapeColourUpdate": @YES, @"shapeID": _selectedEntity.entityId, @"colour": colourString});
     }
 }
 

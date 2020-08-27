@@ -24,6 +24,29 @@ RCT_EXPORT_MODULE()
              };
 }
 
+- (UIColor *) stringToColor:(NSString *)hexString {
+      NSString *cleanString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];
+      if([cleanString length] == 3) {
+          cleanString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
+                         [cleanString substringWithRange:NSMakeRange(0, 1)],[cleanString substringWithRange:NSMakeRange(0, 1)],
+                         [cleanString substringWithRange:NSMakeRange(1, 1)],[cleanString substringWithRange:NSMakeRange(1, 1)],
+                         [cleanString substringWithRange:NSMakeRange(2, 1)],[cleanString substringWithRange:NSMakeRange(2, 1)]];
+      }
+      if([cleanString length] == 6) {
+          cleanString = [cleanString stringByAppendingString:@"ff"];
+      }
+
+      unsigned int baseValue;
+      [[NSScanner scannerWithString:cleanString] scanHexInt:&baseValue];
+
+      float red = ((baseValue >> 24) & 0xFF)/255.0f;
+      float green = ((baseValue >> 16) & 0xFF)/255.0f;
+      float blue = ((baseValue >> 8) & 0xFF)/255.0f;
+      float alpha = ((baseValue >> 0) & 0xFF)/255.0f;
+
+      return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+}
+
 #pragma mark - Events
 
 RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock);
@@ -34,7 +57,9 @@ RCT_CUSTOM_VIEW_PROPERTY(shapeConfiguration, NSDictionary, RNImageEditor)
     RNImageEditor *currentView = !view ? defaultView : view;
     NSDictionary *dict = [RCTConvert NSDictionary:json];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [currentView setShapeConfiguration:dict];
+        if (dict) {
+            [currentView setShapeConfiguration:dict];
+        }
     });
 }
 
@@ -159,11 +184,12 @@ RCT_EXPORT_METHOD(unselectShape:(nonnull NSNumber *)reactTag)
     }];
 }
 
-RCT_EXPORT_METHOD(addShape:(nonnull NSNumber *)reactTag shapeId:(NSString *) shapeId shapeType:(NSString *) shapeType textShapeFontType:(NSString *) textShapeFontType textShapeFontSize:(nonnull NSNumber *) textShapeFontSize textShapeText:(NSString *) textShapeText imageShapeAsset:(NSString *)imageShapeAsset transform:(NSString *)transform center:(NSString *)center)
+RCT_EXPORT_METHOD(addShape:(nonnull NSNumber *)reactTag shapeId:(NSString *) shapeId shapeType:(NSString *) shapeType textShapeFontType:(NSString *) textShapeFontType textShapeFontSize:(nonnull NSNumber *) textShapeFontSize textShapeText:(NSString *) textShapeText imageShapeAsset:(NSString *)imageShapeAsset transform:(NSString *)transform center:(NSString *)center colour:(NSString *) colour)
 {
 
     [self runCanvas:reactTag block:^(RNImageEditor *canvas) {
-        [canvas addEntityWithId:shapeId entityType:shapeType textShapeFontType:textShapeFontType textShapeFontSize:textShapeFontSize textShapeText:textShapeText imageShapeAsset:imageShapeAsset transform: transform center: center];
+        UIColor *colourUI = [self stringToColor: colour];
+        [canvas addEntityWithId:shapeId entityType:shapeType textShapeFontType:textShapeFontType textShapeFontSize:textShapeFontSize textShapeText:textShapeText imageShapeAsset:imageShapeAsset transform: transform center: center colour: colourUI];
     }];
 }
 
