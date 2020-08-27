@@ -933,6 +933,9 @@
     if (state == UIGestureRecognizerStateBegan || state == UIGestureRecognizerStateChanged) {
         if (self.selectedEntity) {
             [self.selectedEntity rotateEntityBy:sender.rotation];
+            NSString *transformString = NSStringFromCGAffineTransform(self.selectedEntity.transform);
+            NSString *centerString = NSStringFromCGPoint(self.selectedEntity.center);
+            [self notifyShapePositionUpdate: transformString center: centerString];
             [self setNeedsDisplayInRect:self.selectedEntity.bounds];
         }
         [sender setRotation:0.0];
@@ -999,6 +1002,9 @@
                 }
                 [pinchRecognizer setScale:1.0];
             }  // else for diagonal pinch
+            NSString *transformString = NSStringFromCGAffineTransform(self.selectedEntity.transform);
+            NSString *centerString = NSStringFromCGPoint(self.selectedEntity.center);
+            [self notifyShapePositionUpdate: transformString center: centerString];
         }  // if numberOfTouches
     }  // StateBegan if
 }
