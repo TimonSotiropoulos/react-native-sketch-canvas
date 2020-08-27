@@ -25,6 +25,9 @@ RCT_EXPORT_MODULE()
 }
 
 - (UIColor *) stringToColor:(NSString *)hexString {
+    if (hexString == nil) {
+        return nil;
+    }
       NSString *cleanString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];
       if([cleanString length] == 3) {
           cleanString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
