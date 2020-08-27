@@ -36,6 +36,7 @@ class ImageEditor extends React.Component {
         onStrokeEnd: PropTypes.func,
         onSketchSaved: PropTypes.func,
         onShapeSelectionChanged: PropTypes.func,
+        isShapeSelected: PropTypes.bool,
         shapeConfiguration: PropTypes.shape({
             shapeBorderColor: PropTypes.string,
             shapeBorderStyle: PropTypes.string,
@@ -200,9 +201,6 @@ class ImageEditor extends React.Component {
 
     onShapePositionUpdate(shapePositionUpdate, shapeID, transform, center) {
       this._shapes = this._shapes.map((shape) => {
-        console.log("TRANSFORM HAPPENING UPDATING SHAPE!");
-        console.log(shape.id);
-        console.log(shapeID);
         if (shape.id === shapeID) {
           shape.transform = transform;
           shape.center = center;
@@ -212,6 +210,7 @@ class ImageEditor extends React.Component {
     }
 
     addPath(data) {
+        // Hardcoded break, if a shape is selected, we dont want to add any paths
         if (this._initialized) {
             if (this._paths.filter((p) => p.path.id === data.path.id).length === 0) {
                 this._paths.push(data);
@@ -359,31 +358,36 @@ class ImageEditor extends React.Component {
                 if (!this.props.touchEnabled) return;
                 const e = evt.nativeEvent;
                 this._offset = { x: e.pageX - e.locationX, y: e.pageY - e.locationY };
-                this._path = {
-                    id: parseInt(Math.random() * 100000000),
-                    color: this.props.strokeColor,
-                    width: this.props.strokeWidth,
-                    data: []
-                };
 
-                UIManager.dispatchViewManagerCommand(
-                    this._handle,
-                    UIManager.getViewManagerConfig(RNImageEditor).Commands.newPath,
-                    [this._path.id, processColor(this._path.color), this._path.width * this._screenScale]
-                );
-                UIManager.dispatchViewManagerCommand(
-                    this._handle,
-                    UIManager.getViewManagerConfig(RNImageEditor).Commands.addPoint,
-                    [
-                        parseFloat((gestureState.x0 - this._offset.x).toFixed(2) * this._screenScale),
-                        parseFloat((gestureState.y0 - this._offset.y).toFixed(2) * this._screenScale),
-                        false
-                    ]
-                );
-                const x = parseFloat((gestureState.x0 - this._offset.x).toFixed(2)),
-                    y = parseFloat((gestureState.y0 - this._offset.y).toFixed(2));
-                this._path.data.push(`${x},${y}`);
-                this.props.onStrokeStart(x, y);
+                if (!this.isShapeSelected) {
+                  this._path = {
+                      id: parseInt(Math.random() * 100000000),
+                      color: this.props.strokeColor,
+                      width: this.props.strokeWidth,
+                      data: []
+                  };
+
+                  UIManager.dispatchViewManagerCommand(
+                      this._handle,
+                      UIManager.getViewManagerConfig(RNImageEditor).Commands.newPath,
+                      [this._path.id, processColor(this._path.color), this._path.width * this._screenScale]
+                  );
+                  UIManager.dispatchViewManagerCommand(
+                      this._handle,
+                      UIManager.getViewManagerConfig(RNImageEditor).Commands.addPoint,
+                      [
+                          parseFloat((gestureState.x0 - this._offset.x).toFixed(2) * this._screenScale),
+                          parseFloat((gestureState.y0 - this._offset.y).toFixed(2) * this._screenScale),
+                          false
+                      ]
+                  );
+                  const x = parseFloat((gestureState.x0 - this._offset.x).toFixed(2)),
+                      y = parseFloat((gestureState.y0 - this._offset.y).toFixed(2));
+                  this._path.data.push(`${x},${y}`);
+                  this.props.onStrokeStart(x, y);
+                } else {
+                  this._path = null;
+                }
             },
             onPanResponderMove: (evt, gestureState) => {
                 if (!this.props.touchEnabled) return;
@@ -449,6 +453,7 @@ class ImageEditor extends React.Component {
                     } else if (e.nativeEvent.hasOwnProperty("success")) {
                         this.props.onSketchSaved(e.nativeEvent.success);
                     } else if (e.nativeEvent.hasOwnProperty("isShapeSelected")) {
+                        this.isShapeSelected = e.nativeEvent.isShapeSelected;
                         this.props.onShapeSelectionChanged(e.nativeEvent.isShapeSelected);
                     } else if (e.nativeEvent.hasOwnProperty("shapePositionUpdate")) {
                         this.onShapePositionUpdate(e.nativeEvent.shapePositionUpdate, e.nativeEvent.shapeID, e.nativeEvent.transform, e.nativeEvent.center);
