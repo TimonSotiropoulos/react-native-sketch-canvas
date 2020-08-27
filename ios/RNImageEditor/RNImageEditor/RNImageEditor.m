@@ -940,7 +940,7 @@
         if (state != UIGestureRecognizerStateCancelled) {
             CGPoint nextPosition = [sender translationInView:self.selectedEntity];
             [self.selectedEntity moveEntityTo: nextPosition];
-            [self notifyShapePositionUpdate: nextPosition];
+            [self notifyShapePositionUpdate: self.selectedEntity.centerPoint];
             [sender setTranslation:CGPointZero inView:sender.view];
             [self setNeedsDisplayInRect:self.selectedEntity.bounds];
         }

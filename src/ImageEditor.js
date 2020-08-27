@@ -448,7 +448,7 @@ class ImageEditor extends React.Component {
                     } else if (e.nativeEvent.hasOwnProperty("isShapeSelected")) {
                         this.props.onShapeSelectionChanged(e.nativeEvent.isShapeSelected);
                     } else if (e.nativeEvent.hasOwnProperty("shapePositionUpdate")) {
-                      this.props.onShapePositionUpdate(e.nativeEvent.shapePositionUpdate, e.nativeEvent.shapeID, e.nativeEvent.shapeX, e.nativeEvent.shapeY);
+                        this.onShapePositionUpdate(e.nativeEvent.shapePositionUpdate, e.nativeEvent.shapeID, e.nativeEvent.shapeX, e.nativeEvent.shapeY);
                     }
                 }}
                 localSourceImage={this.props.localSourceImage}
