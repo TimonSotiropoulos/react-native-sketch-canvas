@@ -250,7 +250,7 @@ class ImageEditor extends React.Component {
             UIManager.dispatchViewManagerCommand(
                 this._handle,
                 UIManager.getViewManagerConfig(RNImageEditor).Commands.addShape,
-                [id, config.shapeType, config.textShapeFontType, fontSize, config.textShapeText, config.imageShapeAsset]
+                [id, config.shapeType, config.textShapeFontType, fontSize, config.textShapeText, config.imageShapeAsset, config.transform, config.center]
             );
         }
     }

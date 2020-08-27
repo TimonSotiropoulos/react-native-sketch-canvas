@@ -594,7 +594,7 @@
     }
 }
 
-- (void)addEntityWithId:(NSString *)entityId entityType:(NSString *)entityType textShapeFontType:(NSString *)textShapeFontType textShapeFontSize:(NSNumber *)textShapeFontSize textShapeText:(NSString *)textShapeText imageShapeAsset:(NSString *)imageShapeAsset {
+- (void)addEntityWithId:(NSString *)entityId entityType:(NSString *)entityType textShapeFontType:(NSString *)textShapeFontType textShapeFontSize:(NSNumber *)textShapeFontSize textShapeText:(NSString *)textShapeText imageShapeAsset:(NSString *)imageShapeAsset transform:(NSString *)transform center:(NSString *)center {
 
     switch ([@[@"Circle", @"Rect", @"Square", @"Triangle", @"Arrow", @"Text", @"Image", @"Cloud", @"Line"] indexOfObject: entityType]) {
         case 1:
@@ -626,6 +626,11 @@
             [self addCircleEntity: entityId];
             break;
         }
+    }
+
+    // lets try to hijack the selected entite here and just transform it if there is a transform value
+    if ( transform != nil ) {
+        self.selectedEntity.transform = CGAffineTransformFromString(transform);
     }
 }
 
@@ -940,7 +945,9 @@
         if (state != UIGestureRecognizerStateCancelled) {
             CGPoint nextPosition = [sender translationInView:self.selectedEntity];
             [self.selectedEntity moveEntityTo: nextPosition];
-            [self notifyShapePositionUpdate: self.selectedEntity.centerPoint];
+            NSString *transformString = NSStringFromCGAffineTransform(self.selectedEntity.transform);
+            NSString *centerString = NSStringFromCGPoint(self.selectedEntity.center);
+            [self notifyShapePositionUpdate: transformString center: centerString];
             [sender setTranslation:CGPointZero inView:sender.view];
             [self setNeedsDisplayInRect:self.selectedEntity.bounds];
         }
@@ -1009,9 +1016,9 @@
     }
 }
 
-- (void)notifyShapePositionUpdate: (CGPoint) position {
+- (void)notifyShapePositionUpdate: (NSString *)transform center:(NSString *)center {
     if (_onChange) {
-        _onChange(@{@"shapePositionUpdate": @YES, @"shapeID": _selectedEntity.entityId, @"shapeX": @(position.x), @"shapeY": @(position.y)});
+        _onChange(@{@"shapePositionUpdate": @YES, @"shapeID": _selectedEntity.entityId, @"transform": transform, @"center": center});
     }
 }
 
